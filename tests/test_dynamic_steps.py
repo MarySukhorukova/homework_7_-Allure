@@ -15,6 +15,7 @@ from selene.support.shared.jquery_style import s
 def test_dynamic_steps():
     with allure.step("Открываем главную страницу"):
         browser.open("https://github.com")
+        browser.driver.maximize_window()
 
     with allure.step("Ищем репозиторий"):
         s(".header-search-input").click()
